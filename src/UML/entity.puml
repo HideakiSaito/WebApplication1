@@ -1,0 +1,163 @@
+@startuml
+annotation java.lang.Override
+annotation javax.persistence.Basic
+annotation javax.persistence.Column
+annotation javax.persistence.Entity
+annotation javax.persistence.Id
+annotation javax.persistence.JoinColumn
+annotation javax.persistence.ManyToOne
+annotation javax.persistence.NamedQueries
+annotation javax.persistence.NamedQuery
+annotation javax.persistence.OneToMany
+annotation javax.persistence.Table
+annotation javax.persistence.Temporal
+annotation javax.validation.constraints.NotNull
+annotation javax.validation.constraints.Size
+annotation javax.xml.bind.annotation.XmlRootElement
+annotation javax.xml.bind.annotation.XmlTransient
+class entity.Customer
+class entity.DiscountCode
+class entity.Manufacturer
+class entity.MicroMarket
+class entity.Product
+class entity.ProductCode
+class entity.PurchaseOrder
+class entity.ZLogin
+class java.math.BigDecimal
+class java.util.Collection
+class java.util.Date
+class javax.persistence.CascadeType
+class javax.persistence.TemporalType
+interface java.io.Serializable
+entity.Customer ..> java.lang.Override
+entity.Customer ..> javax.persistence.Basic
+entity.Customer ..> javax.persistence.Column
+entity.Customer ..> javax.persistence.Entity
+entity.Customer ..> javax.persistence.Id
+entity.Customer ..> javax.persistence.JoinColumn
+entity.Customer ..> javax.persistence.ManyToOne
+entity.Customer ..> javax.persistence.NamedQueries
+entity.Customer ..> javax.persistence.NamedQuery
+entity.Customer ..> javax.persistence.OneToMany
+entity.Customer ..> javax.persistence.Table
+entity.Customer ..> javax.validation.constraints.NotNull
+entity.Customer ..> javax.validation.constraints.Size
+entity.Customer ..> javax.xml.bind.annotation.XmlRootElement
+entity.Customer ..> javax.xml.bind.annotation.XmlTransient
+entity.Customer ..> java.util.Collection
+entity.Customer ..> javax.persistence.CascadeType
+entity.Customer --|> java.io.Serializable
+entity.DiscountCode ..> java.lang.Override
+entity.DiscountCode ..> javax.persistence.Basic
+entity.DiscountCode ..> javax.persistence.Column
+entity.DiscountCode ..> javax.persistence.Entity
+entity.DiscountCode ..> javax.persistence.Id
+entity.DiscountCode ..> javax.persistence.NamedQueries
+entity.DiscountCode ..> javax.persistence.NamedQuery
+entity.DiscountCode ..> javax.persistence.OneToMany
+entity.DiscountCode ..> javax.persistence.Table
+entity.DiscountCode ..> javax.validation.constraints.NotNull
+entity.DiscountCode ..> javax.validation.constraints.Size
+entity.DiscountCode ..> javax.xml.bind.annotation.XmlRootElement
+entity.DiscountCode ..> javax.xml.bind.annotation.XmlTransient
+entity.DiscountCode ..> java.math.BigDecimal
+entity.DiscountCode ..> java.util.Collection
+entity.DiscountCode ..> javax.persistence.CascadeType
+entity.DiscountCode --|> java.io.Serializable
+entity.Manufacturer ..> java.lang.Override
+entity.Manufacturer ..> javax.persistence.Basic
+entity.Manufacturer ..> javax.persistence.Column
+entity.Manufacturer ..> javax.persistence.Entity
+entity.Manufacturer ..> javax.persistence.Id
+entity.Manufacturer ..> javax.persistence.NamedQueries
+entity.Manufacturer ..> javax.persistence.NamedQuery
+entity.Manufacturer ..> javax.persistence.OneToMany
+entity.Manufacturer ..> javax.persistence.Table
+entity.Manufacturer ..> javax.validation.constraints.NotNull
+entity.Manufacturer ..> javax.validation.constraints.Size
+entity.Manufacturer ..> javax.xml.bind.annotation.XmlRootElement
+entity.Manufacturer ..> javax.xml.bind.annotation.XmlTransient
+entity.Manufacturer ..> java.util.Collection
+entity.Manufacturer ..> javax.persistence.CascadeType
+entity.Manufacturer --|> java.io.Serializable
+entity.MicroMarket ..> java.lang.Override
+entity.MicroMarket ..> javax.persistence.Basic
+entity.MicroMarket ..> javax.persistence.Column
+entity.MicroMarket ..> javax.persistence.Entity
+entity.MicroMarket ..> javax.persistence.Id
+entity.MicroMarket ..> javax.persistence.NamedQueries
+entity.MicroMarket ..> javax.persistence.NamedQuery
+entity.MicroMarket ..> javax.persistence.OneToMany
+entity.MicroMarket ..> javax.persistence.Table
+entity.MicroMarket ..> javax.validation.constraints.NotNull
+entity.MicroMarket ..> javax.validation.constraints.Size
+entity.MicroMarket ..> javax.xml.bind.annotation.XmlRootElement
+entity.MicroMarket ..> javax.xml.bind.annotation.XmlTransient
+entity.MicroMarket ..> java.util.Collection
+entity.MicroMarket ..> javax.persistence.CascadeType
+entity.MicroMarket --|> java.io.Serializable
+entity.Product ..> java.lang.Override
+entity.Product ..> javax.persistence.Basic
+entity.Product ..> javax.persistence.Column
+entity.Product ..> javax.persistence.Entity
+entity.Product ..> javax.persistence.Id
+entity.Product ..> javax.persistence.JoinColumn
+entity.Product ..> javax.persistence.ManyToOne
+entity.Product ..> javax.persistence.NamedQueries
+entity.Product ..> javax.persistence.NamedQuery
+entity.Product ..> javax.persistence.OneToMany
+entity.Product ..> javax.persistence.Table
+entity.Product ..> javax.validation.constraints.NotNull
+entity.Product ..> javax.validation.constraints.Size
+entity.Product ..> javax.xml.bind.annotation.XmlRootElement
+entity.Product ..> javax.xml.bind.annotation.XmlTransient
+entity.Product ..> java.math.BigDecimal
+entity.Product ..> java.util.Collection
+entity.Product ..> javax.persistence.CascadeType
+entity.Product --|> java.io.Serializable
+entity.ProductCode ..> java.lang.Override
+entity.ProductCode ..> javax.persistence.Basic
+entity.ProductCode ..> javax.persistence.Column
+entity.ProductCode ..> javax.persistence.Entity
+entity.ProductCode ..> javax.persistence.Id
+entity.ProductCode ..> javax.persistence.NamedQueries
+entity.ProductCode ..> javax.persistence.NamedQuery
+entity.ProductCode ..> javax.persistence.OneToMany
+entity.ProductCode ..> javax.persistence.Table
+entity.ProductCode ..> javax.validation.constraints.NotNull
+entity.ProductCode ..> javax.validation.constraints.Size
+entity.ProductCode ..> javax.xml.bind.annotation.XmlRootElement
+entity.ProductCode ..> javax.xml.bind.annotation.XmlTransient
+entity.ProductCode ..> java.util.Collection
+entity.ProductCode ..> javax.persistence.CascadeType
+entity.ProductCode --|> java.io.Serializable
+entity.PurchaseOrder ..> java.lang.Override
+entity.PurchaseOrder ..> javax.persistence.Basic
+entity.PurchaseOrder ..> javax.persistence.Column
+entity.PurchaseOrder ..> javax.persistence.Entity
+entity.PurchaseOrder ..> javax.persistence.Id
+entity.PurchaseOrder ..> javax.persistence.JoinColumn
+entity.PurchaseOrder ..> javax.persistence.ManyToOne
+entity.PurchaseOrder ..> javax.persistence.NamedQueries
+entity.PurchaseOrder ..> javax.persistence.NamedQuery
+entity.PurchaseOrder ..> javax.persistence.Table
+entity.PurchaseOrder ..> javax.persistence.Temporal
+entity.PurchaseOrder ..> javax.validation.constraints.NotNull
+entity.PurchaseOrder ..> javax.validation.constraints.Size
+entity.PurchaseOrder ..> javax.xml.bind.annotation.XmlRootElement
+entity.PurchaseOrder ..> java.math.BigDecimal
+entity.PurchaseOrder ..> java.util.Date
+entity.PurchaseOrder ..> javax.persistence.TemporalType
+entity.PurchaseOrder --|> java.io.Serializable
+entity.ZLogin ..> java.lang.Override
+entity.ZLogin ..> javax.persistence.Basic
+entity.ZLogin ..> javax.persistence.Column
+entity.ZLogin ..> javax.persistence.Entity
+entity.ZLogin ..> javax.persistence.Id
+entity.ZLogin ..> javax.persistence.NamedQueries
+entity.ZLogin ..> javax.persistence.NamedQuery
+entity.ZLogin ..> javax.persistence.Table
+entity.ZLogin ..> javax.validation.constraints.NotNull
+entity.ZLogin ..> javax.xml.bind.annotation.XmlRootElement
+entity.ZLogin --|> java.io.Serializable
+@enduml
