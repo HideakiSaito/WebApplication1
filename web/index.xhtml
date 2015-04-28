@@ -4,12 +4,28 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>Facelet Title</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
     </h:head>
     <h:body>
         Hello from Facelets
         <br />
-        <h:link outcome="welcomePrimefaces" value="Primefacesようこそページ" />
+        <h:link outcome="HelloTruns" value="トラザクションの実験ページ" />
         日本語いけるかテスト
+        <br />
+        <h:link outcome="/zSkill/List.xhtml" value="Show All ZSkill Items"/>
+        <br />
+        <h:link outcome="/zUser/List.xhtml" value="Show All ZUser Items"/>
+        <br />
+        <h:link outcome="/zVUserSkill/List.xhtml" value="Show All ZVUserSkill Items"/>
+        <br />
+        <h:link outcome="/myEnt1/List" value="Show All MyEnt1 Items"/>
+        <br />
+        <h:link outcome="/myEnt2/List" value="Show All MyEnt2 Items"/>
     </h:body>
+
+
+
+
+
 </html>
 

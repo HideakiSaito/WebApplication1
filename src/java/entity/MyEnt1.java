@@ -6,41 +6,32 @@
 package entity;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.persistence.OneToOne;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author macuser
  */
 @Entity
-@Table(name = "Z_LOGIN")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "ZLogin.findAll", query = "SELECT z FROM ZLogin z"),
-    @NamedQuery(name = "ZLogin.findById", query = "SELECT z FROM ZLogin z WHERE z.id = :id")})
-public class ZLogin implements Serializable {
+public class MyEnt1 implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    public ZLogin() {
-    }
-
-    public ZLogin(Long id) {
-        this.id = id;
-    }
-
+    @Getter @Setter
+    private String name;
+    
+//    @OneToOne(cascade = CascadeType.ALL)
+//    private MyEnt2 myEnt2;
+    
     public Long getId() {
         return id;
     }
@@ -59,10 +50,10 @@ public class ZLogin implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ZLogin)) {
+        if (!(object instanceof MyEnt1)) {
             return false;
         }
-        ZLogin other = (ZLogin) object;
+        MyEnt1 other = (MyEnt1) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -71,7 +62,7 @@ public class ZLogin implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.ZLogin[ id=" + id + " ]";
+        return "entity.MyEnt1[ id=" + id + " ]";
     }
     
 }

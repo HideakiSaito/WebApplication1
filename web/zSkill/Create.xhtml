@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ZSkillCreateDlg" widgetVar="ZSkillCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateZSkillTitle}">
+            <h:form id="ZSkillCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{zSkillController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateZSkillLabel_userId}" for="userId" />
+                        <p:inputText id="userId" value="#{zSkillController.selected.userId}" title="#{bundle.CreateZSkillTitle_userId}" required="true" requiredMessage="#{bundle.CreateZSkillRequiredMessage_userId}"/>
+                        <p:outputLabel value="#{bundle.CreateZSkillLabel_aplicationDevelop}" for="aplicationDevelop" />
+                        <p:inputText id="aplicationDevelop" value="#{zSkillController.selected.aplicationDevelop}" title="#{bundle.CreateZSkillTitle_aplicationDevelop}" />
+                        <p:outputLabel value="#{bundle.CreateZSkillLabel_subscription}" for="subscription" />
+                        <p:inputTextarea rows="4" cols="30" id="subscription" value="#{zSkillController.selected.subscription}" title="#{bundle.CreateZSkillTitle_subscription}" />
+                        <p:outputLabel value="#{bundle.CreateZSkillLabel_javaSe}" for="javaSe" />
+                        <p:inputTextarea rows="4" cols="30" id="javaSe" value="#{zSkillController.selected.javaSe}" title="#{bundle.CreateZSkillTitle_javaSe}" />
+                        <p:outputLabel value="#{bundle.CreateZSkillLabel_javaEe}" for="javaEe" />
+                        <p:inputTextarea rows="4" cols="30" id="javaEe" value="#{zSkillController.selected.javaEe}" title="#{bundle.CreateZSkillTitle_javaEe}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{zSkillController.create}" value="#{bundle.Save}" update="display,:ZSkillListForm:datalist,:growl" oncomplete="handleSubmit(args,'ZSkillCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ZSkillCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

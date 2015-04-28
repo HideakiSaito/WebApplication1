@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ZSkillViewDlg" widgetVar="ZSkillViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewZSkillTitle}">
+            <h:form id="ZSkillViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{zSkillController.selected != null}">
+                        <h:outputText value="#{bundle.ViewZSkillLabel_userId}"/>
+                        <h:outputText value="#{zSkillController.selected.userId}" title="#{bundle.ViewZSkillTitle_userId}"/>
+                        <h:outputText value="#{bundle.ViewZSkillLabel_aplicationDevelop}"/>
+                        <h:outputText value="#{zSkillController.selected.aplicationDevelop}" title="#{bundle.ViewZSkillTitle_aplicationDevelop}"/>
+                        <h:outputText value="#{bundle.ViewZSkillLabel_subscription}"/>
+                        <h:outputText value="#{zSkillController.selected.subscription}" title="#{bundle.ViewZSkillTitle_subscription}"/>
+                        <h:outputText value="#{bundle.ViewZSkillLabel_javaSe}"/>
+                        <h:outputText value="#{zSkillController.selected.javaSe}" title="#{bundle.ViewZSkillTitle_javaSe}"/>
+                        <h:outputText value="#{bundle.ViewZSkillLabel_javaEe}"/>
+                        <h:outputText value="#{zSkillController.selected.javaEe}" title="#{bundle.ViewZSkillTitle_javaEe}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="ZSkillViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
