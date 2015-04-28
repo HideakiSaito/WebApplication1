@@ -1,9 +1,9 @@
 package jsf;
 
-import entity.MyEnt2;
+import jpa.entity.MyEnt2;
 import jsf.util.JsfUtil;
 import jsf.util.JsfUtil.PersistAction;
-import session.MyEnt2Facade;
+import jpa.session.MyEnt2Facade;
 
 import java.io.Serializable;
 import java.util.List;
@@ -24,7 +24,7 @@ import javax.faces.convert.FacesConverter;
 public class MyEnt2Controller implements Serializable {
 
     @EJB
-    private session.MyEnt2Facade ejbFacade;
+    private jpa.session.MyEnt2Facade ejbFacade;
     private List<MyEnt2> items = null;
     private MyEnt2 selected;
 

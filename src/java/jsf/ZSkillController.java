@@ -1,9 +1,9 @@
 package jsf;
 
-import entity.ZSkill;
+import jpa.entity.ZSkill;
 import jsf.util.JsfUtil;
 import jsf.util.JsfUtil.PersistAction;
-import session.ZSkillFacade;
+import jpa.session.ZSkillFacade;
 
 import java.io.Serializable;
 import java.util.List;
@@ -24,7 +24,7 @@ import javax.faces.convert.FacesConverter;
 public class ZSkillController implements Serializable {
 
     @EJB
-    private session.ZSkillFacade ejbFacade;
+    private jpa.session.ZSkillFacade ejbFacade;
     private List<ZSkill> items = null;
     private ZSkill selected;
 

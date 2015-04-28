@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package jpa.session;
 
-import entity.MyEnt1;
+import jpa.entity.MyEnt2;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author macuser
  */
 @Stateless
-public class MyEnt1Facade extends AbstractFacade<MyEnt1> {
+public class MyEnt2Facade extends AbstractFacade<MyEnt2> {
     @PersistenceContext(unitName = "WebApplication1PU")
     private EntityManager em;
 
@@ -24,8 +24,8 @@ public class MyEnt1Facade extends AbstractFacade<MyEnt1> {
         return em;
     }
 
-    public MyEnt1Facade() {
-        super(MyEnt1.class);
+    public MyEnt2Facade() {
+        super(MyEnt2.class);
     }
     
 }

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package jpa.session;
 
-import entity.ZSkill;
-import entity.ZUser;
+import jpa.entity.ZSkill;
+import jpa.entity.ZUser;
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;

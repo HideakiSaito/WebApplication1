@@ -5,7 +5,8 @@
  */
 package session;
 
-import entity.ZUser;
+import jpa.session.ZUserFacade;
+import jpa.entity.ZUser;
 import java.util.List;
 import javax.ejb.embeddable.EJBContainer;
 import org.junit.After;

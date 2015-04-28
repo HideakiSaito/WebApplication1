@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package jpa.session;
 
-import entity.ZVUserSkill;
+import jpa.entity.MyEnt1;
 import javax.ejb.Stateless;
-import javax.ejb.TransactionManagement;
-import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -17,9 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author macuser
  */
 @Stateless
-@TransactionManagement(TransactionManagementType.BEAN)
-public class ZVUserSkillFacade extends AbstractFacade<ZVUserSkill> {
-
+public class MyEnt1Facade extends AbstractFacade<MyEnt1> {
     @PersistenceContext(unitName = "WebApplication1PU")
     private EntityManager em;
 
@@ -28,8 +24,8 @@ public class ZVUserSkillFacade extends AbstractFacade<ZVUserSkill> {
         return em;
     }
 
-    public ZVUserSkillFacade() {
-        super(ZVUserSkill.class);
+    public MyEnt1Facade() {
+        super(MyEnt1.class);
     }
-
+    
 }

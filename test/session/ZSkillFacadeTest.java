@@ -5,7 +5,8 @@
  */
 package session;
 
-import entity.ZSkill;
+import jpa.session.ZSkillFacade;
+import jpa.entity.ZSkill;
 import java.util.List;
 import javax.ejb.embeddable.EJBContainer;
 import org.junit.After;

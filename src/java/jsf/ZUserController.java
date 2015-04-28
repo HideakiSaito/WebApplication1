@@ -1,9 +1,9 @@
 package jsf;
 
-import entity.ZUser;
+import jpa.entity.ZUser;
 import jsf.util.JsfUtil;
 import jsf.util.JsfUtil.PersistAction;
-import session.ZUserFacade;
+import jpa.session.ZUserFacade;
 
 import java.io.Serializable;
 import java.util.List;
@@ -24,7 +24,7 @@ import javax.faces.convert.FacesConverter;
 public class ZUserController implements Serializable {
 
     @EJB
-    private session.ZUserFacade ejbFacade;
+    private jpa.session.ZUserFacade ejbFacade;
     private List<ZUser> items = null;
     private ZUser selected;
 
